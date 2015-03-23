@@ -1,5 +1,5 @@
 /*!
- * # Semantic UI 1.11.3 - Visibility
+ * # Semantic UI 1.11.5 - Visibility
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -46,7 +46,7 @@ module.exports = function(parameters) {
         $window         = $(window),
         $module         = $(this),
         $context        = $(settings.context),
-        $container      = $module.offsetParent(),
+        $images         = $module.find('img'),
 
         selector        = $module.selector || '',
         instance        = $module.data(moduleNamespace),
@@ -132,6 +132,38 @@ module.exports = function(parameters) {
             $context
               .on('scroll' + eventNamespace, module.event.scroll)
             ;
+            if($images.length > 0) {
+              module.bind.imageLoad();
+            }
+          },
+          imageLoad: function() {
+            var
+              imageCount    = $images.length,
+              index         = imageCount,
+              loadedCount   = 0,
+              images        = [],
+              cache         = [],
+              cacheImage    = document.createElement('img'),
+              handleLoad    = function() {
+                loadedCount++;
+                if(loadedCount >= imageCount) {
+                  module.debug('Images finished loading inside element, refreshing position');
+                  module.refresh();
+                }
+              }
+            ;
+            $images
+              .each(function() {
+                images.push( $(this).attr('src') );
+              })
+            ;
+            while(index--) {
+              cacheImage         = document.createElement('img');
+              cacheImage.onload  = handleLoad;
+              cacheImage.onerror = handleLoad;
+              cacheImage.src     = images[index];
+              cache.push(cacheImage);
+            }
           }
         },
 
@@ -152,33 +184,6 @@ module.exports = function(parameters) {
                 module.checkVisibility();
               });
             }
-          }
-        },
-
-        precache: function(images, callback) {
-          if (!(images instanceof Array)) {
-            images = [images];
-          }
-          var
-            imagesLength  = images.length,
-            loadedCounter = 0,
-            cache         = [],
-            cacheImage    = document.createElement('img'),
-            handleLoad    = function() {
-              loadedCounter++;
-              if (loadedCounter >= images.length) {
-                if ($.isFunction(callback)) {
-                  callback();
-                }
-              }
-            }
-          ;
-          while (imagesLength--) {
-            cacheImage         = document.createElement('img');
-            cacheImage.onload  = handleLoad;
-            cacheImage.onerror = handleLoad;
-            cacheImage.src     = images[imagesLength];
-            cache.push(cacheImage);
           }
         },
 
