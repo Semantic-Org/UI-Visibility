@@ -1,3 +1,8 @@
+### Version 1.12.0 - April 13, 2015
+
+- **Visibility** - Adds updated visibility module from `2.x` channel. Visibility will automatically refresh by default after images load on page refresh. Fixes issues with element positions after image loading.
+- **Visibility** - Fixed issue where `precache` behavior was missing from visibility causing `image` lazy loading to fail
+
 ### Version 1.11.0 - March 3, 2015
 
 - **Visibiliity** - Attach callbacks to elements visibility conditions like `top visible` `bottom visible`, `passing`. Useful for things like: image lazy loading, infinite scroll content, and recording tracking metrics.
