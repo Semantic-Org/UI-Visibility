@@ -2,7 +2,7 @@
 Package.describe({
   name    : 'semantic:ui-visibility',
   summary : 'Semantic UI - Visibility: Single component release',
-  version : '1.12.0',
+  version : '1.12.1',
   git     : 'git://github.com/Semantic-Org/UI-Visibility.git',
 });
 
