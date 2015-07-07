@@ -1,3 +1,7 @@
+### Version 2.0.2 - July 7, 2015
+
+- **Dropdown** - Dropdown icon will now always toggle menu visibility [#2510](https://github.com/Semantic-Org/Semantic-UI/issues/2510)
+
 ### Version 2.0.0 - June 30, 2015
 
 - **Visibility** - Using `.visibility({ type: 'fixed'})` will now automatically add a placeholder element which will swap places with an element when it is attached to the viewport. This should make fixed content drastically simpler.
