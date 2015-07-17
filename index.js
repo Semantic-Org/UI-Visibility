@@ -1,5 +1,5 @@
 /*!
- * # Semantic UI 2.0.3 - Visibility
+ * # Semantic UI 2.0.4 - Visibility
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -1138,8 +1138,17 @@ module.exports.settings = {
   // whether to use mutation observers to follow changes
   observeChanges         : true,
 
+  // check position immediately on init
+  initialCheck           : true,
+
   // whether to refresh calculations after all page images load
   refreshOnLoad          : true,
+
+  // whether to refresh calculations after page resize event
+  refreshOnResize        : true,
+
+  // should call callbacks on refresh event (resize, etc)
+  checkOnRefresh         : true,
 
   // callback should only occur one time
   once                   : true,
@@ -1156,9 +1165,6 @@ module.exports.settings = {
   // scroll context for visibility checks
   context                : window,
 
-  // check position immediately on init
-  initialCheck           : true,
-
   // visibility check delay in ms (defaults to animationFrame)
   throttle               : false,
 
@@ -1171,9 +1177,6 @@ module.exports.settings = {
 
   // array of callbacks for percentage
   onPassed               : {},
-
-  // should call callbacks on refresh event (resize, etc)
-  checkOnRefresh         : true,
 
   // standard callbacks
   onOnScreen             : false,

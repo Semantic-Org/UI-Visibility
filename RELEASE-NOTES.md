@@ -1,3 +1,7 @@
+### Version 2.0.4 - July 17, 2015
+
+- **Visibility** - `refreshOnResize` now correctly includes a default value [#2615](https://github.com/Semantic-Org/Semantic-UI/issues/2615)
+
 ### Version 2.0.2 - July 7, 2015
 
 - **Dropdown** - Dropdown icon will now always toggle menu visibility [#2510](https://github.com/Semantic-Org/Semantic-UI/issues/2510)
