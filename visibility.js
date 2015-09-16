@@ -304,6 +304,10 @@ $.fn.visibility = function(parameters) {
               .addClass(className.placeholder)
               .insertAfter($module)
             ;
+            if (settings.omitPlaceholderAttrs)
+            {
+              $placeholder = $placeholder.find('*').addBack().removeAttr(settings.omitPlaceholderAttrs);
+            }
           }
         },
 
