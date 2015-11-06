@@ -1,5 +1,5 @@
 /*!
- * # Semantic UI 2.1.4 - Visibility
+ * # Semantic UI 2.1.6 - Visibility
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -1214,4 +1214,4 @@ _module.exports.settings = {
 
 };
 
-})( require("jquery"), window , document );
+})( require("jquery"), window, document );
