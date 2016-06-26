@@ -1,3 +1,13 @@
+### Version 2.2.0 - June 26, 2016
+
+- **Visibility** - Added `onFixed` and `onUnfixed` callbacks for visibility `type: 'fixed'` 
+- **Visibility** - Added `onLoad` and `onAllLoaded` callback for `type: 'image'` visibility
+- **Visibility** - Added `zIndex` setting for specifying zindex with `type: 'fixed'` [#3370](https://github.com/Semantic-Org/Semantic-UI/issues/3370)
+- **Image** - `transition hidden image` now shows correctly as `visibility: hidden;` and not `display: none`. This will allow `offset` with `visibility` and `sticky` to work more seamlessly. `hidden image` will still remain `display: none;`
+- **Sticky/Visibility** -  Added mutation observer to teardown element with `destroy` if removed from DOM context, fixing a possible memory leak
+- **Rating** - Fixed `ui rating` to not used outlined star in basic variation, instead using a lighter filled in star for increased visibility [#3730](https://github.com/Semantic-Org/Semantic-UI/issues/3730)
+- **Visibility** - Using `type: fixed` will now correctly remove all special classes and placeholder content on `destroy` [#3548](https://github.com/Semantic-Org/Semantic-UI/issues/3548)
+
 ### Version 2.0.4 - July 17, 2015
 
 - **Visibility** - `refreshOnResize` now correctly includes a default value [#2615](https://github.com/Semantic-Org/Semantic-UI/issues/2615)
@@ -14,7 +24,7 @@
 - **Transition** - Transition will no longer force visible/hidden with inline styles if `onComplete` callback sets visibility.
 - **Visibility/Sticky** - Visibility and sticky now refresh automatically after page content loading to deal with changes in position from images loading
 - **Visibility/Sticky** - Visibility now uses pub/sub pattern to greatly improve scroll performance when attaching multiple events
-- **Visibility** - Visiblity includes a new setting `checkOnRefresh` which detemrines whether visibility callbacks should occur on resize or refresh
+- **Visibility** - Visibility includes a new setting `checkOnRefresh` which determines whether visibility callbacks should occur on resize or refresh
 - **Visibility** - Visibility `image` will now wait to lazy load images that are *above* the current screen position, not just below.
 - **Visibility** - In returned `calculations` object, `visible` and `hidden` are renamed to `onScreen` and `offScreen`, since this describes more accurately what the value represents.
 
@@ -25,7 +35,7 @@
 
 ### Version 1.11.0 - March 3, 2015
 
-- **Visibiliity** - Attach callbacks to elements visibility conditions like `top visible` `bottom visible`, `passing`. Useful for things like: image lazy loading, infinite scroll content, and recording tracking metrics.
+- **Visibility** - Attach callbacks to elements visibility conditions like `top visible` `bottom visible`, `passing`. Useful for things like: image lazy loading, infinite scroll content, and recording tracking metrics.
 
 [See the examples](http://www.semantic-ui.com/behaviors/visibility.html#/examples) online for a demonstration.
 
