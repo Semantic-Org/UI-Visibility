@@ -1,6 +1,6 @@
 ### Version 2.2.0 - June 26, 2016
 
-- **Visibility** - Added `onFixed` and `onUnfixed` callbacks for visibility `type: 'fixed'` 
+- **Visibility** - Added `onFixed` and `onUnfixed` callbacks for visibility `type: 'fixed'`
 - **Visibility** - Added `onLoad` and `onAllLoaded` callback for `type: 'image'` visibility
 - **Visibility** - Added `zIndex` setting for specifying zindex with `type: 'fixed'` [#3370](https://github.com/Semantic-Org/Semantic-UI/issues/3370)
 - **Image** - `transition hidden image` now shows correctly as `visibility: hidden;` and not `display: none`. This will allow `offset` with `visibility` and `sticky` to work more seamlessly. `hidden image` will still remain `display: none;`
