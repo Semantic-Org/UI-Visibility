@@ -1,3 +1,8 @@
+#### Dropdown
+
+- **Visibility** - Added documentation for `onOnscreen` and `onOffScreen`, two very important callbacks that occur when an element is or isn't in currently scrolled view.
+- **Visibility** - Images that use `$('img').visibility({ type: 'image'})` will no longer animate a second time if re-initialized.
+
 ### Version 2.2.0 - June 26, 2016
 
 - **Visibility** - Added `onFixed` and `onUnfixed` callbacks for visibility `type: 'fixed'`
