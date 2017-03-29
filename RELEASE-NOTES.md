@@ -1,3 +1,9 @@
+### Version 2.2.10 - March 28, 2017
+
+- **Visibility** - Visibility events now fire correctly when using `context` other than body that has `overflow-x` or `overflow-y` set to `auto` or `scroll`
+- **Visibility** - Fixed bug where using visibility with `context` setting on a scrollable context (with overflow) would cause callbacks to fire incorrectly
+- **Visibility** - Fixed bug where `top passed` and `bottom passed` would appear as incorrect values if using settings from `get element calculations` when element is off screen.
+
 #### Dropdown
 
 - **Visibility** - Added documentation for `onOnscreen` and `onOffScreen`, two very important callbacks that occur when an element is or isn't in currently scrolled view.
