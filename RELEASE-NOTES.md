@@ -1,3 +1,7 @@
+### Version 2.2.11 - July 11, 2017
+
+- **Popup** - Separated className setting for `visible` into `visible` and `popupVisible`, this way you can remove visible indication on activating element without modifying popup visibility.
+
 ### Version 2.2.10 - March 28, 2017
 
 - **Visibility** - Visibility events now fire correctly when using `context` other than body that has `overflow-x` or `overflow-y` set to `auto` or `scroll`
