@@ -1,3 +1,7 @@
+### Version 2.2.14 - Jan 29, 2018
+
+- **Visibility** - Fixes issue where `bottomPassed` and `topPassed` would not fire under some conditions
+
 ### Version 2.2.11 - July 11, 2017
 
 - **Popup** - Separated className setting for `visible` into `visible` and `popupVisible`, this way you can remove visible indication on activating element without modifying popup visibility.
