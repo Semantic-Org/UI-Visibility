@@ -1,3 +1,7 @@
+### Version 2.3.1 - Mar 19, 2018
+
+- **Visibility** - Fixed bug that could cause `onScreen` callback to not occur properly for elements that are taller than screen.
+
 ### Version 2.2.14 - Jan 29, 2018
 
 - **Visibility** - Fixes issue where `bottomPassed` and `topPassed` would not fire under some conditions
